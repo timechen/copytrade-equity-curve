@@ -88,6 +88,23 @@
       padding: 14px 0;
       font-size: 13px;
     }
+    .snapshot-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 12px 0 4px;
+      padding: 0;
+      list-style: none;
+    }
+    .snapshot-strip li {
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 6px 8px;
+      background: var(--panel);
+      color: var(--muted);
+      font-size: 12px;
+      font-variant-numeric: tabular-nums;
+    }
     .legend-item {
       display: inline-flex;
       align-items: center;
@@ -115,6 +132,11 @@
     th { color: var(--muted); font-weight: 600; }
     .pos { color: var(--accent); }
     .neg { color: var(--danger); }
+    .note {
+      margin: 0 0 10px;
+      color: var(--muted);
+      font-size: 13px;
+    }
     @media (max-width: 900px) {
       header, main { padding-left: 16px; padding-right: 16px; }
       .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -129,9 +151,11 @@
   </header>
   <main>
     <section class="stats" id="stats"></section>
+    <p class="note" id="chartNote"></p>
     <section class="chart-wrap">
       <svg id="chart" viewBox="0 0 1400 760" role="img" aria-label="c1-c11 hourly PnL curve"></svg>
     </section>
+    <ul class="snapshot-strip" id="snapshots"></ul>
     <div class="legend" id="legend"></div>
     <table id="latestTable"></table>
   </main>
@@ -168,6 +192,19 @@
       const svg = document.getElementById("chart");
       svg.textContent = "";
       const series = pointSeries(history);
+      document.getElementById("chartNote").textContent = series.length < 2
+        ? "当前只有 1 个快照，先显示快照点；累计到 2 个及以上快照后会连成盈亏曲线。"
+        : "";
+      if (!series.length) {
+        const el = document.createElementNS("http://www.w3.org/2000/svg", "text");
+        el.setAttribute("x", "700");
+        el.setAttribute("y", "380");
+        el.setAttribute("text-anchor", "middle");
+        el.setAttribute("class", "muted");
+        el.textContent = "暂无快照数据";
+        svg.appendChild(el);
+        return;
+      }
       const labels = Array.from(new Set(series.flatMap((snap) => Array.from(snap.accounts.keys())))).sort((a, b) => Number(a.slice(1)) - Number(b.slice(1)));
       const left = 78, right = 28, top = 32, bottom = 76, width = 1400, height = 760;
       const chartW = width - left - right;
@@ -216,10 +253,31 @@
           return row ? { x: snap.t, y: row.pnl } : null;
         }).filter(Boolean);
         if (pts.length >= 2) add("path", { d: pathFor(pts, xFor, yFor), class: "series", stroke: colors[index % colors.length] });
+        pts.forEach((pt) => add("circle", {
+          cx: xFor(pt.x),
+          cy: yFor(pt.y),
+          r: 4,
+          fill: colors[index % colors.length],
+          "fill-opacity": 0.9
+        }));
       });
       const totalPts = series.map((snap) => ({ x: snap.t, y: snap.total }));
       if (totalPts.length >= 2) add("path", { d: pathFor(totalPts, xFor, yFor), class: "series total", stroke: colors[11] });
+      totalPts.forEach((pt) => add("circle", {
+        cx: xFor(pt.x),
+        cy: yFor(pt.y),
+        r: 6,
+        fill: colors[11],
+        "fill-opacity": 0.95
+      }));
       add("text", { x: left, y: 22, "font-weight": "700" }).textContent = "PnL (USDC)";
+    }
+
+    function renderSnapshots(history) {
+      const series = pointSeries(history);
+      document.getElementById("snapshots").innerHTML = series.length
+        ? series.map((snap, index) => `<li>#${index + 1} ${bjTime(snap.capturedAt)}</li>`).join("")
+        : `<li>暂无快照</li>`;
     }
 
     function renderLegend(latest) {
@@ -266,6 +324,7 @@
           : "暂无快照，等待 GitHub Actions 首次采样。";
         renderStats(latest, history);
         renderChart(history);
+        renderSnapshots(history);
         renderLegend(latest);
         renderTable(latest);
       })
