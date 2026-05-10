@@ -314,8 +314,27 @@
           </tr>`).join("")}</tbody>`;
     }
 
-    fetch("./data/equity-history.json", { cache: "no-store" })
-      .then((res) => res.json())
+    const dataSources = [
+      "https://raw.githubusercontent.com/timechen/copytrade-equity-curve/main/data/equity-history.json",
+      "./data/equity-history.json"
+    ];
+
+    async function loadHistory() {
+      let lastError;
+      for (const url of dataSources) {
+        try {
+          const bust = `${url}${url.includes("?") ? "&" : "?"}t=${Date.now()}`;
+          const res = await fetch(bust, { cache: "no-store" });
+          if (!res.ok) throw new Error(`${url} returned ${res.status}`);
+          return await res.json();
+        } catch (error) {
+          lastError = error;
+        }
+      }
+      throw lastError || new Error("No data source available");
+    }
+
+    loadHistory()
       .then((data) => {
         const history = data.history || [];
         const latest = data.latest || history[history.length - 1] || null;
