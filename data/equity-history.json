@@ -1,81 +1,81 @@
 {
   "schemaVersion": 1,
   "source": "https://data-api.polymarket.com/v1/accounting/snapshot",
-  "updatedAt": "2026-08-10T18:04:05+00:00",
+  "updatedAt": "2026-08-10T19:04:05+00:00",
   "latest": {
-    "capturedAt": "2026-08-10T18:04:05+00:00",
+    "capturedAt": "2026-08-10T19:04:05+00:00",
     "accounts": [
       {
         "label": "c1",
         "safe": "0x584f30Ecdf31370511fcd400Daf1a45D6be92fAa",
         "principal": 400.0,
-        "equity": 319.885268,
-        "pnl": -80.114732,
+        "equity": 319.658601,
+        "pnl": -80.341399,
         "cash": 314.812501,
-        "openValue": 5.0725,
+        "openValue": 4.8459,
         "redeemableValue": 0.23,
         "positionsCount": 111,
-        "valuationTime": "2026-08-10T18:04:05Z"
+        "valuationTime": "2026-08-10T19:04:05Z"
       },
       {
         "label": "c2",
         "safe": "0x33FeBa814ca5d3d2153cD6541A45893A31ADD8D0",
         "principal": 400.0,
-        "equity": 218.854902,
-        "pnl": -181.145098,
+        "equity": 218.859161,
+        "pnl": -181.140839,
         "cash": 213.691445,
-        "openValue": 5.163,
+        "openValue": 5.1673,
         "redeemableValue": 0.0,
         "positionsCount": 100,
-        "valuationTime": "2026-08-10T18:04:08Z"
+        "valuationTime": "2026-08-10T19:04:07Z"
       },
       {
         "label": "c3",
         "safe": "0x3566eeeE37204384Ed5e0062459eC41DD8c310fE",
         "principal": 400.0,
-        "equity": 392.759193,
-        "pnl": -7.240807,
+        "equity": 392.784854,
+        "pnl": -7.215146,
         "cash": 374.917178,
-        "openValue": 17.8416,
+        "openValue": 17.8672,
         "redeemableValue": 0.0,
         "positionsCount": 130,
-        "valuationTime": "2026-08-10T18:04:10Z"
+        "valuationTime": "2026-08-10T19:04:08Z"
       },
       {
         "label": "c4",
         "safe": "0xb25F6A87ae2A9687f91ba41E8b057b7A94fD4724",
         "principal": 400.0,
-        "equity": 350.898156,
-        "pnl": -49.101844,
+        "equity": 350.695389,
+        "pnl": -49.304611,
         "cash": 332.869763,
-        "openValue": 18.0278,
+        "openValue": 17.825,
         "redeemableValue": 0.0,
         "positionsCount": 122,
-        "valuationTime": "2026-08-10T18:04:13Z"
+        "valuationTime": "2026-08-10T19:04:10Z"
       },
       {
         "label": "c5",
         "safe": "0x15ADd1176cD6F0bE9F9E536E5a0D2414B42d4Fc4",
         "principal": 400.0,
-        "equity": 277.716687,
-        "pnl": -122.283313,
+        "equity": 277.739755,
+        "pnl": -122.260245,
         "cash": 263.281379,
-        "openValue": 14.4348,
+        "openValue": 14.4579,
         "redeemableValue": 0.0,
         "positionsCount": 100,
-        "valuationTime": "2026-08-10T18:04:16Z"
+        "valuationTime": "2026-08-10T19:04:12Z"
       },
       {
         "label": "c6",
         "safe": "0xaF754d06F47282182AAF1B6ef323c577f1ba9cD0",
         "principal": 400.0,
-        "equity": 394.605944,
-        "pnl": -5.394056,
+        "equity": 394.523449,
+        "pnl": -5.476551,
         "cash": 381.675239,
-        "openValue": 12.9304,
+        "openValue": 12.8479,
         "redeemableValue": 0.0,
         "positionsCount": 125,
-        "valuationTime": "2026-08-10T18:04:18Z"
+        "valuationTime": "2026-08-10T19:04:14Z"
       },
       {
         "label": "c7",
@@ -87,7 +87,7 @@
         "openValue": 6.5572,
         "redeemableValue": 0.2445,
         "positionsCount": 171,
-        "valuationTime": "2026-08-10T18:04:21Z"
+        "valuationTime": "2026-08-10T19:04:15Z"
       },
       {
         "label": "c8",
@@ -99,31 +99,31 @@
         "openValue": 7.7328,
         "redeemableValue": 0.0,
         "positionsCount": 155,
-        "valuationTime": "2026-08-10T18:04:23Z"
+        "valuationTime": "2026-08-10T19:04:18Z"
       },
       {
         "label": "c9",
         "safe": "0x1A762eB456EB061AB1D28B6c8a19fB4e3b38B26B",
         "principal": 400.0,
-        "equity": 367.023226,
-        "pnl": -32.976774,
+        "equity": 367.015726,
+        "pnl": -32.984274,
         "cash": 355.721622,
-        "openValue": 11.3011,
+        "openValue": 11.2936,
         "redeemableValue": 0.1241,
         "positionsCount": 179,
-        "valuationTime": "2026-08-10T18:04:25Z"
+        "valuationTime": "2026-08-10T19:04:19Z"
       },
       {
         "label": "c10",
         "safe": "0xf8dD9B5e97b3331Dd12AAd70f247168f5479AB18",
         "principal": 400.0,
-        "equity": 386.986598,
-        "pnl": -13.013402,
+        "equity": 386.879855,
+        "pnl": -13.120145,
         "cash": 368.672212,
-        "openValue": 18.3139,
+        "openValue": 18.2072,
         "redeemableValue": 0.64,
         "positionsCount": 171,
-        "valuationTime": "2026-08-10T18:04:27Z"
+        "valuationTime": "2026-08-10T19:04:21Z"
       },
       {
         "label": "c11",
@@ -132,18 +132,18 @@
         "equity": 146.342791,
         "pnl": -153.657209,
         "cash": 144.551281,
-        "openValue": 1.7914,
+        "openValue": 1.7939,
         "redeemableValue": 0.0,
         "positionsCount": 264,
-        "valuationTime": "2026-08-10T18:04:29Z"
+        "valuationTime": "2026-08-10T19:04:23Z"
       }
     ],
     "summary": {
       "accountCount": 11,
       "totalPrincipal": 4300.0,
-      "totalEquity": 3441.828928,
-      "totalPnl": -858.171072,
-      "totalPnlPct": -19.957467
+      "totalEquity": 3441.255744,
+      "totalPnl": -858.744256,
+      "totalPnlPct": -19.970797
     },
     "failures": []
   },
@@ -321816,6 +321816,151 @@
         "totalEquity": 3441.828928,
         "totalPnl": -858.171072,
         "totalPnlPct": -19.957467
+      },
+      "failures": []
+    },
+    {
+      "capturedAt": "2026-08-10T19:04:05+00:00",
+      "accounts": [
+        {
+          "label": "c1",
+          "safe": "0x584f30Ecdf31370511fcd400Daf1a45D6be92fAa",
+          "principal": 400.0,
+          "equity": 319.658601,
+          "pnl": -80.341399,
+          "cash": 314.812501,
+          "openValue": 4.8459,
+          "redeemableValue": 0.23,
+          "positionsCount": 111,
+          "valuationTime": "2026-08-10T19:04:05Z"
+        },
+        {
+          "label": "c2",
+          "safe": "0x33FeBa814ca5d3d2153cD6541A45893A31ADD8D0",
+          "principal": 400.0,
+          "equity": 218.859161,
+          "pnl": -181.140839,
+          "cash": 213.691445,
+          "openValue": 5.1673,
+          "redeemableValue": 0.0,
+          "positionsCount": 100,
+          "valuationTime": "2026-08-10T19:04:07Z"
+        },
+        {
+          "label": "c3",
+          "safe": "0x3566eeeE37204384Ed5e0062459eC41DD8c310fE",
+          "principal": 400.0,
+          "equity": 392.784854,
+          "pnl": -7.215146,
+          "cash": 374.917178,
+          "openValue": 17.8672,
+          "redeemableValue": 0.0,
+          "positionsCount": 130,
+          "valuationTime": "2026-08-10T19:04:08Z"
+        },
+        {
+          "label": "c4",
+          "safe": "0xb25F6A87ae2A9687f91ba41E8b057b7A94fD4724",
+          "principal": 400.0,
+          "equity": 350.695389,
+          "pnl": -49.304611,
+          "cash": 332.869763,
+          "openValue": 17.825,
+          "redeemableValue": 0.0,
+          "positionsCount": 122,
+          "valuationTime": "2026-08-10T19:04:10Z"
+        },
+        {
+          "label": "c5",
+          "safe": "0x15ADd1176cD6F0bE9F9E536E5a0D2414B42d4Fc4",
+          "principal": 400.0,
+          "equity": 277.739755,
+          "pnl": -122.260245,
+          "cash": 263.281379,
+          "openValue": 14.4579,
+          "redeemableValue": 0.0,
+          "positionsCount": 100,
+          "valuationTime": "2026-08-10T19:04:12Z"
+        },
+        {
+          "label": "c6",
+          "safe": "0xaF754d06F47282182AAF1B6ef323c577f1ba9cD0",
+          "principal": 400.0,
+          "equity": 394.523449,
+          "pnl": -5.476551,
+          "cash": 381.675239,
+          "openValue": 12.8479,
+          "redeemableValue": 0.0,
+          "positionsCount": 125,
+          "valuationTime": "2026-08-10T19:04:14Z"
+        },
+        {
+          "label": "c7",
+          "safe": "0x2F444ef2b326812bE90BF3490B1130d68f988202",
+          "principal": 400.0,
+          "equity": 301.327149,
+          "pnl": -98.672851,
+          "cash": 294.769671,
+          "openValue": 6.5572,
+          "redeemableValue": 0.2445,
+          "positionsCount": 171,
+          "valuationTime": "2026-08-10T19:04:15Z"
+        },
+        {
+          "label": "c8",
+          "safe": "0xb67933a3679672C802E0aC1Bddb6f7380a580E5e",
+          "principal": 400.0,
+          "equity": 285.429014,
+          "pnl": -114.570986,
+          "cash": 277.695854,
+          "openValue": 7.7328,
+          "redeemableValue": 0.0,
+          "positionsCount": 155,
+          "valuationTime": "2026-08-10T19:04:18Z"
+        },
+        {
+          "label": "c9",
+          "safe": "0x1A762eB456EB061AB1D28B6c8a19fB4e3b38B26B",
+          "principal": 400.0,
+          "equity": 367.015726,
+          "pnl": -32.984274,
+          "cash": 355.721622,
+          "openValue": 11.2936,
+          "redeemableValue": 0.1241,
+          "positionsCount": 179,
+          "valuationTime": "2026-08-10T19:04:19Z"
+        },
+        {
+          "label": "c10",
+          "safe": "0xf8dD9B5e97b3331Dd12AAd70f247168f5479AB18",
+          "principal": 400.0,
+          "equity": 386.879855,
+          "pnl": -13.120145,
+          "cash": 368.672212,
+          "openValue": 18.2072,
+          "redeemableValue": 0.64,
+          "positionsCount": 171,
+          "valuationTime": "2026-08-10T19:04:21Z"
+        },
+        {
+          "label": "c11",
+          "safe": "0xa1304f4ccF55C14ca98AD9163031686d0e5e1F7b",
+          "principal": 300.0,
+          "equity": 146.342791,
+          "pnl": -153.657209,
+          "cash": 144.551281,
+          "openValue": 1.7939,
+          "redeemableValue": 0.0,
+          "positionsCount": 264,
+          "valuationTime": "2026-08-10T19:04:23Z"
+        }
+      ],
+      "summary": {
+        "accountCount": 11,
+        "totalPrincipal": 4300.0,
+        "totalEquity": 3441.255744,
+        "totalPnl": -858.744256,
+        "totalPnlPct": -19.970797
       },
       "failures": []
     }
